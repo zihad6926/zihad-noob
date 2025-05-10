@@ -5,12 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Zihad's Portfolio</title>
   <style>
-    body {
+    * {
       margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background: linear-gradient(to bottom, #0d1b2a, #1b263b);
       color: #ffffff;
       text-align: center;
+      overflow-x: hidden;
+      animation: fadeIn 2s ease-in-out;
+    }
+    h1, h2 {
+      margin: 20px 0;
+      animation: fadeIn 1s ease-in-out;
+    }
+    h2 {
+      color: #3fc1c9;
     }
     .profile-pic {
       width: 150px;
@@ -19,22 +32,11 @@
       border: 5px solid #3fc1c9;
       margin-top: 30px;
       object-fit: cover;
+      animation: scaleUp 1s ease-in-out;
     }
     .container {
       padding: 20px;
-    }
-    h1 {
-      font-size: 2.5rem;
-      margin: 10px 0;
-    }
-    h2 {
-      font-weight: 400;
-      color: #ccc;
-      margin-bottom: 10px;
-    }
-    .contact {
-      color: #aaa;
-      font-size: 0.9rem;
+      animation: fadeIn 2s ease-in-out;
     }
     .section {
       background-color: rgba(255, 255, 255, 0.05);
@@ -43,6 +45,30 @@
       border-radius: 10px;
       max-width: 600px;
       box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+      animation: fadeIn 3s ease-in-out;
+    }
+    .section h2 {
+      color: #3fc1c9;
+      margin-bottom: 10px;
+    }
+    .contact {
+      color: #aaa;
+      font-size: 0.9rem;
+      animation: slideIn 1.5s ease-in-out;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      0% { opacity: 0; }
+      100% { opacity: 1; }
+    }
+    @keyframes scaleUp {
+      0% { transform: scale(0); opacity: 0; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    @keyframes slideIn {
+      0% { transform: translateY(20px); opacity: 0; }
+      100% { transform: translateY(0); opacity: 1; }
     }
   </style>
 </head>
