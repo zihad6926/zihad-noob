@@ -1,2 +1,0 @@
-# zihad-noob
-zihad noob
